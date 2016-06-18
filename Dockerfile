@@ -12,3 +12,4 @@ EXPOSE 27017 28017
 
 ENTRYPOINT [ "/run" ]
 CMD [ "mongod" ]
+

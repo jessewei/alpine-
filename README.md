@@ -11,24 +11,24 @@ As a prerequisite, you need [Docker](https://docker.com) to be installed.
 
 To download this image from the public docker hub:
 
-	$ docker pull mvertes/alpine-mongo
+	$ docker pull jessewei/alpine-mongo
 
 To re-build this image from the dockerfile:
 
-	$ docker build -t mvertes/alpine-mongo .
+	$ docker build -t jessewei/alpine-mongo .
 
 ## Usage
 
 To run `mongod`:
 
-	$ docker run -d --name mongo -p 27017:27017 mvertes/alpine-mongo
+	$ docker run -d --name mongo -p 27017:27017 jessewei/alpine-mongo
 
 You can also specify the database repository where to store the data
 with the volume -v option:
 
     $ docker run -d --name mongo -p 27017:27017 \
 	  -v /somewhere/onmyhost/mydatabase:/data/db \
-	  mvertes/alpine-mongo
+	  jessewei/alpine-mongo
 
 Now, on the same host where the mongodb container is running, to trace
 database network activity in real-time:
